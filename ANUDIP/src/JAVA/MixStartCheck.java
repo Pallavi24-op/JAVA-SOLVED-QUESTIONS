@@ -1,0 +1,25 @@
+package JAVA;
+//Return true if the given string begins with "mix", except the 'm' can be anything, so "pix", "9ix" .. all count.
+//
+//
+//mixStart("mix snacks") → true
+//mixStart("pix snacks") → true
+//mixStart("piz snacks") → false
+public class MixStartCheck {
+
+// Method to check if string starts with any char + "ix"
+public static boolean mixStart(String str) {
+    if (str.length() < 3) {
+        return false;
+    }
+    return str.substring(1, 3).equals("ix");
+}
+// Main method to test the function
+public static void main(String[] args) {
+    System.out.println(mixStart("mix snacks")); 
+    System.out.println(mixStart("pix snacks")); 
+    System.out.println(mixStart("piz snacks")); 
+    System.out.println(mixStart("9ixy"));       
+    System.out.println(mixStart("mi"));         
+}
+}
